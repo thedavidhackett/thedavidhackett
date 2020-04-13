@@ -1,0 +1,131 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 6.4rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.navbar-brand img {
+    width: 2.4rem;
+}
+
+.review {
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stars {
+    margin-bottom: 0.5rem;
+}
+
+.project-content {
+    display: flex;
+}
+
+.project-description {
+    width: 100%;
+    p {
+        margin: 0;
+    }
+
+    @include md {
+        width: 60%;
+    }
+}
+
+.project-image {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+
+    @include md {
+        width: 40%;
+    }
+}
+
+.right-margin {
+    margin-right: 1rem;
+}
+
+.text-right {
+    text-align: end;
+}
+
+.about-content {
+    display: flex;
+}
+
+.about-description {
+    width: 60%;
+}
+
+.about-image {
+    width: 40%;
+    img {
+        width: 100%;
+    }
+}
