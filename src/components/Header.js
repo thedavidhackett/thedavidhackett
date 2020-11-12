@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "./app.scss";
+import { Container } from "reactstrap";
 
 export default function Header() {
     const [heading, setHeading] = useState("David");
     const headings = [
         "Developer",
-        "Doer",
-        "Daughter",
+        "Designer",
+        "Dog Owner",
         "Alliterator",
-        "What?",
         "David",
     ];
     function changeHeading(headings) {
@@ -25,5 +24,9 @@ export default function Header() {
         changeHeading(headings);
     }, []);
 
-    return <h1>{heading}</h1>;
+    return (
+        <Container>
+            <h1>{heading}</h1>
+        </Container>
+    );
 }

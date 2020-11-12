@@ -71,6 +71,14 @@ section {
     width: 2.4rem;
 }
 
+.icon-link {
+    color: black;
+    svg {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
 .review {
     display: block;
     text-align: center;
@@ -81,29 +89,18 @@ section {
     margin-bottom: 0.5rem;
 }
 
-.project-content {
-    display: flex;
+.project {
+    margin-bottom: 2rem;
 }
 
 .project-description {
     width: 100%;
-    p {
-        margin: 0;
-    }
-
-    @include md {
-        width: 60%;
-    }
 }
 
 .project-image {
     width: 100%;
     img {
         width: 100%;
-    }
-
-    @include md {
-        width: 40%;
     }
 }
 
@@ -115,17 +112,26 @@ section {
     text-align: end;
 }
 
-.about-content {
-    display: flex;
-}
-
 .about-description {
-    width: 60%;
+    width: 100;
 }
 
 .about-image {
-    width: 40%;
+    width: 100%;
     img {
         width: 100%;
     }
+}
+
+.circle-image {
+    border-radius: 50%;
+}
+
+footer {
+    padding: 2rem 0 1rem 0;
+}
+
+.container {
+    max-width: 960px;
+    padding: 0 1rem 0 1rem;
 }

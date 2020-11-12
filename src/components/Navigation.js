@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./app.scss";
 import {
     Collapse,
     Nav,
@@ -7,8 +6,8 @@ import {
     NavbarBrand,
     NavbarToggler,
     NavItem,
-    NavLink,
 } from "reactstrap";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +23,24 @@ export default function Navigation() {
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
-                        <NavLink href="#reviews">Reviews</NavLink>
+                        <Link className="nav-link" to="/">
+                            About
+                        </Link>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#projects">Projects</NavLink>
+                        <Link className="nav-link" to="/my-work">
+                            My Work
+                        </Link>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#about">About</NavLink>
+                        <Link className="nav-link" to="/my-projects">
+                            My Projects
+                        </Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link className="nav-link" to="/blog">
+                            Blog
+                        </Link>
                     </NavItem>
                 </Nav>
             </Collapse>
